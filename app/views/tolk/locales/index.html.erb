@@ -8,10 +8,11 @@
         <% if missing_count > 0 %>
           <span class="missing_translations"><%= missing_count %></span>
         <% end %>
+        ( <%= link_to 'download', locale_path(locale, :yaml) %> )
       </li>
     <% end %>
   </ul>
-  
+
 <% else %>
   <p>No locales yet.</p>
 
@@ -27,5 +28,3 @@
   </p>
 </div>
 <% end %>
-
-
